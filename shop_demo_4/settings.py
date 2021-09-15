@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-i4j^055s6%v&yekw$9f%!uc@k*(srfcu-n_f5v_3l17bnb30g=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shop-demo-4.herokuapp.com']
+ALLOWED_HOSTS = ['shop-demo-0.herokuapp.com']
 
 
 # Application definition
@@ -90,10 +90,10 @@ DATABASES = {
 #    },
 #    'new': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd69i7vm94mkrde',
-        'USER': 'xkstzaufzoidww',
-        'PASSWORD': '3db34b24edea037a561297742527074466a429881b92c54173800752ef5e8b47',
-        'HOST': 'ec2-54-156-60-12.compute-1.amazonaws.com',
+        'HOST': 'ec2-44-198-146-224.compute-1.amazonaws.com',
+        'NAME': 'dci9s0dni5k7dh',
+        'USER': 'kezywppljxjbzw',
+        'PASSWORD': '62f511c148e84648e74f12e70c5a2adade4bae088559847889f02803222715ea',
         'PORT': '5432',
 
     }
