@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{% block title %}Vựa rau củ quả Thái Hiệp{% endblock %}</title>
+<link href="{% static "css/base.css" %}" rel="stylesheet">
+</head>
+<body>
+	<div id="header">
+		<a href="/" class="logo">Vựa rau củ quả Thái Hiệp</a>
+	</div>
+	<div id="subheader">
+		<div class="cart">
+
+				{% if cart != 0 %}
+					Giỏ hàng:
+					<a href="{% url "cart:cart_detail" %}">
+						{{ cart.get_total_quantity }} kg ,
+						{{ cart.get_total_price }} VND
+					</a>
+				{% else %}
+					Giỏ hàng đang trống.
+				{% endif %}
+
+		</div>
+	</div>
+	<div id="content">
+		{% block content %}
+		{% endblock %}
+	</div>
+</body>
+</html>

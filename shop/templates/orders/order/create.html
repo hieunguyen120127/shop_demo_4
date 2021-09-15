@@ -1,0 +1,26 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+Đặt hàng
+{% endblock %}
+
+{% block content %}
+	<h1>Đặt hàng</h1>
+	<div class="order-info">
+		<h3>Giỏ hàng của bạn</h3>
+		<ol>
+		{% for item in cart %}
+				<li>
+					{{ item.product.name }} x {{ item.total_quantity }}kg
+					<span>{{ item.total_price }} VND</span>
+				</li>
+		{% endfor %}
+		</ol>
+		<p>Tổng số tiền: {{ cart.get_total_price }} VND</p>
+	</div>
+		<form method="post" class="order-form">
+			{{ form.as_p }}
+			<p><input type="submit" value="Xác nhận"></p>
+			{% csrf_token %}
+		</form>
+{% endblock %}
